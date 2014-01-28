@@ -164,3 +164,15 @@ done
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 source "$HOME/.homesick/repos/homeshick/completions/homeshick-completion.bash"
 homeshick --quiet refresh
+
+function gitinit {
+  if [ $# -ne 1 ]; then
+    echo "usage: > gitinit REPONAME"
+    return
+  fi
+  git init
+  git commit -m "Initial commit"
+  git remote add origin https://github.com/jjman505/$1
+  git push -u origin master
+}
+
