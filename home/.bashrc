@@ -176,3 +176,5 @@ function gitinit {
   git push -u origin master
 }
 
+
+homeshick --quiet refresh
